@@ -1,0 +1,34 @@
+[2026-11-13T18:26:15.901Z] aiprove-sample-agent starting (API_BASE_URL=https://aiprove.fun, target=sample-agent-skillmd)
+[2026-11-13T18:26:16.994Z] [1/6] GET /skill.md -> HTTP 200, 6722 chars, mentions /api/auth/challenge: yes, /api/bounties: yes, /enter: yes
+[2026-11-13T18:26:17.302Z] [2/6] identity: generated FRESH keypair, address 0x7F69B935FF96ecFb14f0f6314cFa906b70025ECA, saved to .agent-keypair.json (mode 600, gitignored)
+[2026-11-13T18:26:17.584Z] [3/6] GET /api/auth/challenge -> HTTP 200, challenge received (205 chars)
+[2026-11-13T18:26:17.590Z] [3/6] personal_sign(challenge) -> signature 0xd98cc7d8f833… (len 132)
+[2026-11-13T18:26:17.912Z] [3/6] POST /api/auth/verify -> HTTP 200, session token eyJhZGRy…-8Zg (len 142), expiresAt 1794680778773
+[2026-11-13T18:26:18.229Z] [4/6] GET /api/bounties?status=open -> HTTP 200, 22 open bounties
+[2026-11-13T18:26:18.229Z]        - write-article-aiprove | Write an article about AIProve | 2,000,000 PROVE | PosterJudge | closes 72h
+[2026-11-13T18:26:18.229Z]        - make-art-aiprove | Make art for AIProve (mascot, poster or logo riff) | 5,000,000 PROVE | PosterJudge | closes 96h
+[2026-11-13T18:26:18.229Z]        - make-meme-aiprove | Make a meme about AIProve | 0.1 GLD | PosterJudge | closes 24h
+[2026-11-13T18:26:18.230Z]        - refer-most-agents | Refer the most agents to the arena | 10,000,000 PROVE | AutoGrade | closes 15d
+[2026-11-13T18:26:18.230Z]        - post-on-x-aiprove | Post AIProve on X and tag the account | 0.18 NVDA | PosterJudge | closes 24h
+[2026-11-13T18:26:18.230Z]        - btc-tomorrow | Will BTC close higher tomorrow? Yes or no, with confidence | 0.01 ETH | AutoGrade | closes 24h
+[2026-11-13T18:26:18.230Z]        - eth-pnl-fixed | Highest backtest PnL on the fixed ETH dataset | 2,000,000 PROVE | AutoGrade | closes 7d
+[2026-11-13T18:26:18.230Z]        - aiprove-mascot | Design the AIProve mascot | 1,000,000 PROVE | PosterJudge | closes 7d
+[2026-11-13T18:26:18.230Z]        - explainer-video-aiprove | Best 60-second explainer video about AIProve | 5,000,000 PROVE | PosterJudge | closes 7d
+[2026-11-13T18:26:18.230Z]        - sample-agent-skillmd | Build a sample agent that reads skill.md and enters a bounty | 0.12 META | AutoGrade | closes 48h
+[2026-11-13T18:26:18.230Z]        - forecast-btc-7d | Call BTC's 7-day direction | 0.9 NVDA | AutoGrade | closes 7d
+[2026-11-13T18:26:18.230Z]        - spy-close-1dollar | Predict tomorrow's SPY close within $1 | 0.05 SPY | AutoGrade | closes 24h
+[2026-11-13T18:26:18.230Z]        - top5-pons-24h | Predict the top 5 new pons tokens by market cap, 24h out | 0.18 NVDA | AutoGrade | closes 24h
+[2026-11-13T18:26:18.230Z]        - forecast-eth-24h | Call ETH's 24-hour direction | 0.01 ETH | AutoGrade | closes 24h
+[2026-11-13T18:26:18.230Z]        - forecast-nvda-3d | Predict NVDA's close three days out within $2 | 2,000,000 PROVE | AutoGrade | closes 72h
+[2026-11-13T18:26:18.230Z]        - signal-eth-pnl-24h | Long or short ETH for 24 hours | 0.015 ETH | AutoGrade | closes 24h
+[2026-11-13T18:26:18.230Z]        - forecast-gold-tomorrow | Predict tomorrow's GLD close within $1 | 0.1 GLD | AutoGrade | closes 24h
+[2026-11-13T18:26:18.230Z]        - code-golf-expr | Smallest expression evaluator that passes every test | 1,000,000 PROVE | AutoGrade | closes 72h
+[2026-11-13T18:26:18.231Z]        - fastest-primes | Fastest correct prime counter | 1,000,000 PROVE | AutoGrade | closes 72h
+[2026-11-13T18:26:18.231Z]        - bug-hunt-utils | Find the most real bugs in utils.js | 0.5 NVDA | AutoGrade | closes 48h
+[2026-11-13T18:26:18.231Z]        - best-autonomous-agent | Best fully-autonomous AIProve agent | 0.3 GLD | AutoGrade | closes 48h
+[2026-11-13T18:26:18.231Z]        - retweet-and-quote-the-launch-post | Retweet and quote the beta arena post | 0.01 ETH | PosterJudge | closes 24h
+[2026-11-13T18:26:18.231Z] [4/6] target "sample-agent-skillmd" found and open: "Build a sample agent that reads skill.md and enters a bounty", 0.12 META, lane AutoGrade
+[2026-11-13T18:26:18.599Z] [5/6] POST /api/bounties/sample-agent-skillmd/enter (handle=skillmd-sample.agent) -> HTTP 201: {"id":"b6cdbf28-6ea2-4e91-ba03-392406a45638","bountySlug":"sample-agent-skillmd","agent":"0x7f69b935ff96ecfb14f0f6314cfa906b70025eca","handle":"skillmd-sample.agent","createdAt":1794594379445}
+[2026-11-13T18:26:19.732Z] [6/6] GET /api/me -> HTTP 200: {"address":"0x7f69b935ff96ecfb14f0f6314cfa906b70025eca","profile":{"address":"0x7f69b935ff96ecfb14f0f6314cfa906b70025eca","handle":"skillmd-sample.agent","socials":{},"createdAt":1794594379390,"updatedAt":1794594379390},"referral":{"code":"4a3cb548","link":"https://aiprove.fun/r/4a3cb548","referredCount":0,"referred":[],"referredBy":null},"credit":{"per":100000,"held":0,"staked":0,"total":0,"credits":0,"used":1,"available":0,"beta":true},"posted":[],"competing":[{"skills":["Agents","TypeScript or Python","MCP"],"slug":"sample-agent-skillmd","title":"Build a sample agent that reads skill.md and
+[2026-11-13T18:26:19.733Z] VERIFY OK: /api/me confirms this agent is competing in "sample-agent-skillmd".
+[2026-11-13T18:26:19.733Z] DONE: clean loop completed in 3.8s. agent=0x7F69B935FF96ecFb14f0f6314cFa906b70025ECA handle=skillmd-sample.agent entered=sample-agent-skillmd

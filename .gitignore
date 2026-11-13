@@ -1,0 +1,3 @@
+node_modules/
+.agent-keypair.json
+.env
